@@ -1,0 +1,50 @@
+/* Main app container */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+/* Layout container */
+.layout-container {
+  display: flex;
+  flex-grow: 1; /* Ensures layout fills the viewport height */
+}
+
+/* Content wrapper */
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Fills available space in non-admin layout */
+}
+
+/* Main content area */
+.main-content {
+  flex-grow: 1; /* Pushes the footer to the bottom when content is insufficient */
+   /* Adjust padding as necessary */
+}
+
+/* Sidebar (optional) */
+.sidebar {
+  background: #f4f4f4;
+  width: 250px; /* Adjust width as needed */
+}
+
+/* Footer styles */
+footer {
+  background-color: #113805;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 10px; /* Add padding for smaller screens */
+  }
+
+  footer {
+    padding: 15px 0; /* Adjust footer padding */
+  }
+}

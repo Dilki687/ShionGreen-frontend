@@ -1,0 +1,68 @@
+/* ContactUs.css */
+.banner-section {
+  background-image: url("../images/banner1.jpg");  /* Adjust the path as necessary */
+  background-size: cover;   /* Make sure the image covers the entire section */
+  background-position: center center;   /* Center the image */
+  background-repeat: no-repeat;  /* Prevent repetition of the image */
+  min-height: 400px;  /* Adjust the minimum height as needed */
+  filter: brightness(0.8) contrast(1.2); /* Optional: Adjust brightness/contrast for better clarity */
+  margin-top: 70px; /* Same as the navbar height */      
+}
+
+
+.banner-section h1 {
+  font-size: 4rem;
+  margin-top: 50px;
+}
+
+.banner-section p {
+  font-size: 1.5rem; 
+}
+
+/* Contact Details Cards */
+.card {
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .banner-section {
+    min-height: 300px;
+  }
+
+  .banner-section h1 {
+    font-size: 2rem;
+  }
+
+  .banner-section p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .banner-section {
+    min-height: 250px;
+  }
+
+  .banner-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .banner-section p {
+    font-size: 0.9rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-text {
+    font-size: 0.85rem;
+  }
+}
+
+

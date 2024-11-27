@@ -1,0 +1,51 @@
+.order-form-container {
+  padding-top: 70px !important; 
+}
+
+.order-form-card {
+    position: relative; /* Make this the container for the overlay */
+    background-image: url('../images/form-bg1.jpeg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    padding: 50px 20px;
+    border-radius: 10px;
+    color: #fff; /* Ensure the text stands out */
+  }
+  
+  .order-form-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    border-radius: 10px; /* Match the card's border radius */
+    z-index: 0; /* Place the overlay behind the content */
+  }
+  
+  .order-form-card .card-body {
+    position: relative;
+    z-index: 1; /* Ensure the content is above the overlay */
+  }
+  
+  .order-form-label {
+    font-weight: bold;
+    text-align: start;
+    display: block;
+    color: #fff; /* Ensure label text is visible on the dark overlay */
+  }
+  
+  .order-form-submit {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #113805;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .order-form-submit:hover {
+    background-color: #228006;
+  }
+  
