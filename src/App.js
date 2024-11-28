@@ -24,7 +24,10 @@ function App() {
 
 const MainLayout = () => {
   const location = useLocation();
-  const isAdminRoute = location.pathname === "/admin";
+  const isAdminRoute = location.pathname.startsWith("/admin");
+
+  // Debugging route detection
+  console.log("Current path:", location.pathname);
 
   return (
     <div className="layout-container">
