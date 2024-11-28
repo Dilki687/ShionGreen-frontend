@@ -34,14 +34,22 @@ const MainLayout = () => {
       {/* Sidebar for admin route */}
       {isAdminRoute && <Sidebar />}
 
-      <div className="content-wrapper">
-  <NavBar />
-  <main className="main-content">
-    <HomePage />
-  </main>
-  <Footer />
-</div>
+      <div className={isAdminRoute ? "content-wrapper flex-grow-1" : "content-wrapper"}>
+        {!isAdminRoute && <NavBar />}
 
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/contactus" element={<ContactUs />} />
+            <Route path="/orderform" element={<OrderForm />} />
+            <Route path="/admin" element={<AdminPage />} />
+          </Routes>
+        </main>
+
+        {!isAdminRoute && <Footer />}
+      </div>
     </div>
   );
 };
