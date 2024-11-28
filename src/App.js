@@ -26,17 +26,11 @@ const MainLayout = () => {
   const location = useLocation();
   const isAdminRoute = location.pathname.startsWith("/admin");
 
-  // Debugging route detection
-  console.log("Current path:", location.pathname);
-
   return (
     <div className="layout-container">
-      {/* Sidebar for admin route */}
       {isAdminRoute && <Sidebar />}
-
       <div className={isAdminRoute ? "content-wrapper flex-grow-1" : "content-wrapper"}>
         {!isAdminRoute && <NavBar />}
-
         <main className="main-content">
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -47,7 +41,6 @@ const MainLayout = () => {
             <Route path="/admin" element={<AdminPage />} />
           </Routes>
         </main>
-
         {!isAdminRoute && <Footer />}
       </div>
     </div>
