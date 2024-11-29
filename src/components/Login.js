@@ -26,7 +26,7 @@ const Login = () => {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/auth/login",
+        "https://shion-green-backend.vercel.app/auth/login",
         formData
       );
       console.log("Login Success:", data);
@@ -49,7 +49,7 @@ const Login = () => {
       const tokenId = credentialResponse.credential;
       console.log("Token ID:", tokenId); // Log the token to ensure it's valid
 
-      const { data } = await axios.post("http://localhost:5000/auth/google", {
+      const { data } = await axios.post("https://shion-green-backend.vercel.app/auth/google", {
         tokenId, // Send the token ID to the backend
       });
 
